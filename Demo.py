@@ -85,15 +85,24 @@ try:
             #GPIO.output(AN22,GPIO.HIGH)
             #GPIO.output(BN21,GPIO.LOW)
             #GPIO.output(BN22,GPIO.HIGH)
-        elif char == curses.KEY_HOME:
-            GPIO.output(AN11,GPIO.LOW)
-            GPIO.output(AN12,GPIO.LOW)
-            GPIO.output(BN11,GPIO.LOW)
+        elif char == curses.KEY_UP:
+            #GPIO.output(AN11,GPIO.HIGH)
+            #GPIO.output(AN12,GPIO.LOW)
+            GPIO.output(BN11,GPIO.HIGH)
             GPIO.output(BN12,GPIO.LOW)
-            GPIO.output(AN21,GPIO.LOW)
-            GPIO.output(AN22,GPIO.LOW)
-            GPIO.output(BN21,GPIO.LOW)
-            GPIO.output(BN22,GPIO.LOW)
+            #GPIO.output(AN21,GPIO.HIGH)
+            #GPIO.output(AN22,GPIO.LOW)
+            #GPIO.output(BN21,GPIO.HIGH)
+            #GPIO.output(BN22,GPIO.LOW)
+        elif char == curses.KEY_DOWN:
+            #GPIO.output(AN11,GPIO.HIGH)
+            #GPIO.output(AN12,GPIO.LOW)
+            GPIO.output(BN11,GPIO.LOW)
+            GPIO.output(BN12,GPIO.HIGH)
+            #GPIO.output(AN21,GPIO.HIGH)
+            #GPIO.output(AN22,GPIO.LOW)
+            #GPIO.output(BN21,GPIO.HIGH)
+            #GPIO.output(BN22,GPIO.LOW)
         sleep(0.02)  # small delay to avoid busy loop
 except KeyboardInterrupt:
     pass
